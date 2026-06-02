@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Casa de Bolos Toledo · Arraiá de Sabores</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-cream">
+
+<div class="floral-bg-deco"></div>
+
+<header class="fixed top-0 left-0 right-0 z-50 nav-blur">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <div class="flex items-center gap-2">
+      <span class="text-2xl"></span>
+
+      <span class="font-serif text-lg md:text-xl text-rose-900 tracking-wide">
+        Casa de Bolos Toledo
+      </span>
+    </div>
+
+    <nav class="hidden md:flex items-center gap-8 text-sm text-rose-900/80">
+      <a href="#destaque" class="hover:text-gold transition">Destaque</a>
+      <a href="#cardapio" class="hover:text-gold transition">Cardápio</a>
+      <a href="#encomendas" class="hover:text-gold transition">Encomendas</a>
+    </nav>
+
+    <a href="#encomendas" class="hidden md:inline-block px-5 py-2 rounded-full bg-gold text-white text-sm font-medium hover:bg-gold-dark transition shadow">
+      Encomendar
+    </a>
+
+  </div>
+</header>
+
+<section class="hero relative pt-32 pb-24 overflow-hidden">
+
+  <div class="petals">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+
+    <p class="hero-tag fade-in text-orange-700 tracking-[0.3em] text-xs md:text-sm mb-6">
+       ARRAIÁ CASA DE BOLOS 
+    </p>
+
+    <h1 class="font-serif text-4xl md:text-7xl text-rose-900 leading-tight fade-in mb-6">
+      Festa Junina<br/>
+      <span class="italic text-gold">
+        Casa de Bolos
+      </span>
+    </h1>
+
+    <p class="font-serif italic text-lg md:text-2xl text-rose-800/80 max-w-2xl mx-auto mb-10 fade-in">
+      Os sabores mais gostosos do arraial para aquecer seu São João.
+    </p>
+
+    <a href="#cardapio" class="fade-in inline-block px-10 py-4 bg-gradient-to-r from-orange-400 to-red-500 text-white rounded-full text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all font-medium">
+      Ver Sabores Juninos →
+    </a>
+
+  </div>
+</section>
+
+<section id="destaque" class="py-24 relative">
+
+  <div class="absolute inset-0 bg-gradient-to-b from-yellow-50 via-white to-orange-50 -z-10"></div>
+
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+    <div class="reveal">
+
+      <div class="featured-image-wrap">
+
+        <img
+          src="assets/WhatsApp Image 2026-05-29 at 13.29.22.jpeg"
+          alt="Bolo Festa Junina"
+          class="featured-image"
+        />
+
+        <div class="ribbon">
+          FESTA JUNINA
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="reveal">
+
+      <p class="text-sm tracking-[0.25em] text-gold font-medium mb-3">
+         ✦ ARRAIÁ ✦
+      </p>
+
+      <h2 class="font-serif text-3xl md:text-5xl text-rose-900 mb-6 leading-tight">
+        Bolo Especial Junino<br/>
+        <span class="italic">
+          Bolo de Amendoim
+        </span>
+      </h2>
+
+      <p class="text-rose-900/80 text-lg leading-relaxed mb-5">
+       
+      </p>
+
+      <p class="text-rose-700/70 italic mb-8">
+        O verdadeiro sabor da roça em uma edição especial irresistível.
+      </p>
+
+      <div class="flex items-center gap-6 mb-8">
+        <span class="font-serif text-4xl text-gold">
+          R$ 38,00
+        </span>
+
+        <span class="text-sm text-rose-700/60">
+          
+        </span>
+      </div>
+
+      <a href="#encomendas" class="inline-block px-8 py-4 bg-rose-900 text-white rounded-full hover:bg-rose-800 transition shadow-lg hover:shadow-xl">
+        Encomendar Agora
+      </a>
+
+    </div>
+
+  </div>
+
+  </div>
+<section class="py-20 bg-white-gold relative">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div class="order-2 md:order-1 reveal">
+      <p class="text-sm tracking-[0.25em] text-gold font-medium mb-3"></p>
+      <h2 class="font-serif text-3xl md:text-4xl text-orange-900 mb-6 leading-tight">Nossa Loja<br/><span class="italic"></span></h2>
+      <p class="text-orange-900/80 text-lg leading-relaxed mb-6">
+        Venha conhecer os deliciosos bolos da Casa de Bolos Toledo! Feitos diariamente, com sabor caseiro e aquele frescor que faz toda diferença
+      </p>
+      <div class="flex items-center gap-6">
+        <span class="font-serif text-3xl text-gold"></span>
+      </div>
+    </div>
+    <div class="order-1 md:order-2 reveal">
+      <div class="featured-image-wrap small">
+        <img src="assets/WhatsApp Image 2026-05-04 at 15.54.59.jpeg" alt="Bolo Caseiro no Pote" class="featured-image" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cardapio" class="py-24 relative">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center mb-14 reveal">
+
+      <p class="text-sm tracking-[0.3em] text-gold mb-3">
+        NOSSO CARDÁPIO
+      </p>
+
+      <h2 class="font-serif text-4xl md:text-5xl text-rose-900">
+        Sabores do Arraiá
+      </h2>
+
+    </div>
+
+    <div id="categories" class="flex flex-wrap justify-center gap-3 md:gap-4 mb-14">
+
+ <button class="cat-btn" data-cat="juninos">
+        Destaques Juninos
+      </button>
+
+      <button class="cat-btn" data-cat="recheados">
+         Recheados
+      </button>
+
+      <button class="cat-btn" data-cat="tradicionais">
+         Tradicionais
+      </button>
+
+      <button class="cat-btn" data-cat="tortas">
+         Tortas e Cucas
+      </button>
+
+      <button class="cat-btn" data-cat="gelados">
+         Gelados e Brownies
+      </button>
+
+      <button class="cat-btn" data-cat="bolo-de-pote">
+        Bolos de Pote
+      </button>
+
+<button class="cat-btn active" data-cat="all">Todos</button>
+
+    </div>
+
+    <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+
+  </div>
+
+</section>
+
+<section id="encomendas" class="py-24 relative">
+
+  <div class="absolute inset-0 bg-gradient-to-b from-yellow-50 to-orange-100 -z-10"></div>
+
+  <div class="max-w-6xl mx-auto px-6">
+
+    <div class="text-center mb-14 reveal">
+
+      <h2 class="font-serif text-4xl md:text-5xl text-rose-900 mb-4">
+        Faça sua encomenda<br/>
+        <span class="italic">
+          para o Arraiá
+        </span>
+      </h2>
+
+      <p class="text-rose-900/70 text-lg max-w-2xl mx-auto">
+        Escolha a unidade mais próxima e deixe sua Festa Junina ainda mais saborosa.
+      </p>
+
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <div class="store-card reveal">
+
+        <div class="text-4xl mb-3">📍</div>
+
+        <h3 class="font-serif text-2xl text-rose-900 mb-2">
+          Unidade Centro
+        </h3>
+
+        <p class="text-rose-900/70 mb-1">
+          Rua XV de Novembro – Centro
+        </p>
+
+        <p class="text-rose-900/70 mb-4">
+          Toledo/PR
+        </p>
+
+        <p class="text-rose-900 font-medium mb-6">
+          📞 (45) 99931-7788
+        </p>
+
+        <a href="https://wa.me/5545999317788" target="_blank" class="wa-btn">
+          <i data-lucide="message-circle"></i>
+          Pedir no WhatsApp
+        </a>
+
+      </div>
+
+      <div class="store-card reveal">
+
+        <div class="text-4xl mb-3">📍</div>
+
+        <h3 class="font-serif text-2xl text-rose-900 mb-2">
+          Unidade Vila Industrial
+        </h3>
+
+        <p class="text-rose-900/70 mb-1">
+          Toledo/PR
+        </p>
+
+        <p class="text-rose-900/70 mb-4">
+          Vila Industrial
+        </p>
+
+        <p class="text-rose-900 font-medium mb-6">
+          📞 (45) 99974-0346
+        </p>
+
+        <a href="https://wa.me/5545999740346" target="_blank" class="wa-btn">
+          <i data-lucide="message-circle"></i>
+          Pedir no WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer class="footer relative pt-20 pb-10">
+
+  <div class="flags-footer">
+    <span></span>
+  </div>
+
+  <div class="petals-footer">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+
+    <p class="font-serif italic text-2xl md:text-3xl text-white mb-3">
+      Viva o melhor do São João 
+    </p>
+
+    <h3 class="font-serif text-xl text-white/90 mb-2">
+      Casa de Bolos Toledo – 2026
+    </h3>
+
+    <p class="text-white/70 italic">
+      Feito com carinho para adoçar seu arraial.
+    </p>
+
+  </div>
+
+</footer>
+
+<script type="module" src="app.js"></script>
+
+</body>
+</html>

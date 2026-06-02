@@ -1,0 +1,585 @@
+:root {
+  --cream: #fffaf0;
+
+  --gold: #ff9800;
+  --gold-light: #ffb74d;
+  --gold-dark: #fb8c00;
+
+  --rose-900: #5b341f;
+  --rose-800: #7c4a2d;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--cream);
+  color: var(--rose-900);
+}
+
+.font-serif {
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+}
+
+.bg-cream {
+  background: var(--cream);
+}
+
+.text-gold {
+  color: var(--gold);
+}
+
+.bg-gold {
+  background: var(--gold);
+}
+
+.bg-gold-dark:hover,
+.hover\:bg-gold-dark:hover {
+  background: var(--gold-dark);
+}
+
+.text-rose-900 {
+  color: var(--rose-900);
+}
+
+.bg-rose-900 {
+  background: var(--rose-900);
+}
+
+.hover\:bg-rose-800:hover {
+  background: var(--rose-800);
+}
+
+.nav-blur {
+  background: rgba(255, 250, 240, 0.88);
+  backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid rgba(255, 152, 0, 0.15);
+}
+
+.floral-bg-deco {
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+  z-index: 0;
+
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(255,193,7,0.12) 0%, transparent 30%),
+    radial-gradient(circle at 90% 80%, rgba(255,87,34,0.12) 0%, transparent 35%);
+}
+
+.hero {
+  background:
+    radial-gradient(circle at top, rgba(255,193,7,0.2) 0%, transparent 50%),
+    linear-gradient(180deg, #fff3cd 0%, #fffaf0 100%);
+}
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100px;
+
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      #ff5252 0 40px,
+      #ffd740 40px 80px,
+      #40c4ff 80px 120px,
+      #69f0ae 120px 160px
+    );
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    95% 70%,
+    90% 0,
+    85% 70%,
+    80% 0,
+    75% 70%,
+    70% 0,
+    65% 70%,
+    60% 0,
+    55% 70%,
+    50% 0,
+    45% 70%,
+    40% 0,
+    35% 70%,
+    30% 0,
+    25% 70%,
+    20% 0,
+    15% 70%,
+    10% 0,
+    5% 70%,
+    0 0
+  );
+
+  opacity: 0.95;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.petals {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.petals span {
+  position: absolute;
+
+  font-size: 1.8rem;
+
+  animation: floatPetal 12s linear infinite;
+}
+
+.petals span:nth-child(1) {
+  left: 5%;
+  top: 10%;
+}
+
+.petals span:nth-child(2) {
+  left: 90%;
+  top: 15%;
+}
+
+.petals span:nth-child(3) {
+  left: 8%;
+  top: 70%;
+}
+
+.petals span:nth-child(4) {
+  left: 92%;
+  top: 65%;
+}
+
+.petals span:nth-child(5) {
+  left: 15%;
+  top: 40%;
+}
+
+.petals span:nth-child(6) {
+  left: 85%;
+  top: 40%;
+}
+
+@keyframes floatPetal {
+
+  0%,100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-25px) rotate(10deg);
+  }
+}
+
+.featured-image-wrap {
+  position: relative;
+
+  border-radius: 32px;
+
+  background: white;
+
+  padding: 1.5rem;
+
+  box-shadow:
+    0 30px 80px -20px rgba(255,152,0,0.25),
+    0 10px 30px -10px rgba(0,0,0,0.08);
+
+  transition: transform 0.6s cubic-bezier(0.16,1,0.3,1);
+}
+
+.featured-image-wrap:hover {
+  transform: translateY(-5px);
+}
+
+.featured-image {
+  width: 100%;
+  height: 500px;
+
+  object-fit: cover;
+
+  border-radius: 24px;
+}
+
+.ribbon {
+  position: absolute;
+
+  top: 24px;
+  left: -8px;
+
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+
+  color: white;
+
+  padding: 0.5rem 1.2rem;
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.2em;
+
+  font-weight: 600;
+
+  border-radius: 4px;
+
+  box-shadow: 0 8px 20px rgba(255,152,0,0.4);
+}
+
+.divider-flower {
+  display: inline-block;
+
+  width: 120px;
+  height: 1px;
+
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+
+  position: relative;
+}
+
+.divider-flower::after {
+  content: "ðŸŒ½";
+
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background: var(--cream);
+
+  padding: 0 10px;
+}
+
+.cat-btn {
+  padding: 0.7rem 1.6rem;
+
+  border-radius: 999px;
+
+  background: white;
+
+  color: var(--rose-900);
+
+  font-size: 0.95rem;
+
+  font-weight: 500;
+
+  border: 1px solid rgba(255,152,0,0.15);
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.cat-btn:hover {
+  border-color: var(--gold);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 18px rgba(255,152,0,0.18);
+}
+
+.cat-btn.active {
+  background: linear-gradient(135deg, var(--rose-900), var(--rose-800));
+
+  color: white;
+
+  border-color: transparent;
+}
+
+.product-card {
+  background: white;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 4px 20px -4px rgba(255,152,0,0.1),
+    0 1px 3px rgba(0,0,0,0.04);
+
+  transition: all 0.5s cubic-bezier(0.16,1,0.3,1);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 30px 60px -20px rgba(255,152,0,0.25),
+    0 10px 25px -10px rgba(0,0,0,0.1);
+}
+
+.product-img-wrap {
+  position: relative;
+
+  height: 280px;
+
+  overflow: hidden;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.8s ease;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.08);
+}
+
+.product-body {
+  padding: 1.5rem 1.5rem 1.8rem;
+
+  text-align: center;
+}
+
+.product-title {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 1.5rem;
+
+  color: var(--rose-900);
+
+  margin-bottom: 0.4rem;
+
+  font-weight: 600;
+}
+
+.product-price {
+  color: var(--gold);
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 1.6rem;
+
+  font-weight: 600;
+
+  margin-bottom: 0.7rem;
+}
+
+.product-desc {
+  color: rgba(91,52,31,0.7);
+
+  font-size: 0.95rem;
+
+  line-height: 1.5;
+
+  font-style: italic;
+}
+
+.store-card {
+  background: white;
+
+  border-radius: 28px;
+
+  padding: 2.5rem;
+
+  text-align: center;
+
+  box-shadow: 0 20px 50px -15px rgba(255,152,0,0.18);
+
+  transition: transform 0.4s ease;
+}
+
+.store-card:hover {
+  transform: translateY(-6px);
+}
+
+.wa-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.6rem;
+
+  width: 100%;
+
+  background: linear-gradient(135deg, #25D366, #1ebe57);
+
+  color: white;
+
+  padding: 1rem 1.5rem;
+
+  border-radius: 999px;
+
+  font-weight: 500;
+
+  transition: all 0.3s ease;
+}
+
+.footer {
+  background: linear-gradient(
+    135deg,
+    #7c4a2d 0%,
+    #5b341f 60%,
+    #3b2416 100%
+  );
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.petals-footer {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+}
+
+.petals-footer span {
+  position: absolute;
+
+  font-size: 1.6rem;
+
+  animation: floatPetal 14s ease-in-out infinite;
+}
+
+.petals-footer span:nth-child(1) {
+  left: 8%;
+  top: 20%;
+}
+
+.petals-footer span:nth-child(2) {
+  left: 88%;
+  top: 25%;
+}
+
+.petals-footer span:nth-child(3) {
+  left: 15%;
+  top: 70%;
+}
+
+.petals-footer span:nth-child(4) {
+  left: 80%;
+  top: 75%;
+}
+
+.petals-footer span:nth-child(5) {
+  left: 50%;
+  top: 15%;
+}
+
+@media (max-width: 768px) {
+
+  .featured-image {
+    height: 380px;
+  }
+
+  .product-img-wrap {
+    height: 240px;
+  }
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.flags-footer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+}
+
+.flags-footer span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      #ff5252 0 40px,
+      #ffd740 40px 80px,
+      #40c4ff 80px 120px,
+      #69f0ae 120px 160px,
+      #ff80ab 160px 200px
+    );
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    97.5% 100%,
+    95% 0,
+    92.5% 100%,
+    90% 0,
+    87.5% 100%,
+    85% 0,
+    82.5% 100%,
+    80% 0,
+    77.5% 100%,
+    75% 0,
+    72.5% 100%,
+    70% 0,
+    67.5% 100%,
+    65% 0,
+    62.5% 100%,
+    60% 0,
+    57.5% 100%,
+    55% 0,
+    52.5% 100%,
+    50% 0,
+    47.5% 100%,
+    45% 0,
+    42.5% 100%,
+    40% 0,
+    37.5% 100%,
+    35% 0,
+    32.5% 100%,
+    30% 0,
+    27.5% 100%,
+    25% 0,
+    22.5% 100%,
+    20% 0,
+    17.5% 100%,
+    15% 0,
+    12.5% 100%,
+    10% 0,
+    7.5% 100%,
+    5% 0,
+    2.5% 100%,
+    0 0
+  );
+}
